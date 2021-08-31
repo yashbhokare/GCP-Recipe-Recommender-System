@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <h3>Ingredients</h3>
+</mat-toolbar>
+<div *ngIf="ingredientsList">
+  <div class="cart-items">
+    <mat-selection-list #ingredients>
+      <mat-list-option *ngFor="let value of ingredientsList">
+        {{ value }}
+      </mat-list-option>
+    </mat-selection-list>
+    <p>Options selected: {{ ingredients.selectedOptions.selected.length }}</p>
+  </div>
+</div>
