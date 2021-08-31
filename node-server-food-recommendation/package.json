@@ -1,0 +1,29 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "@google-cloud/local-auth": "^1.0.1",
+    "@google-cloud/speech": "^4.4.0",
+    "@google-cloud/storage": "^5.8.4",
+    "@google-cloud/text-to-speech": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "googleapis": "^72.0.0",
+    "mediaserver": "^0.1.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "node-microphone": "^0.1.5",
+    "node-record-lpcm16": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
