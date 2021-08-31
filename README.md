@@ -15,19 +15,24 @@ situation where we lack all of the ingredients needed to prepare the dish, and w
 canceling the plan. But what if we had a website that would take our weekly schedule and
 suggest a recipe with a list of all the ingredients needed? This would relieve us of a lot of work
 and allow us to enjoy our favorite dishes.
+
 We have developed a website that allows users to maintain a weekly meal schedule, and the
 website will check available recipes for preparing the dish and will list down the necessary
 ingredients. It will then fetch the prices of the items on the list across a shopping site and
 display them so that the users can add them to the cart.
+
 We are further using a LDA model that will make recipe recommendations based on the user's
 preferences. We intend to analyze different recipes' datasets based on various parameters such
 as the type of ingredients, the number of steps in the recipe, the number of ingredients, user
 reviews and ratings, and provide personalized recommendations. We are doing topic modelling
 to provide personalized recommendations.
+
 To make it more interactive, we added a feature in which we developed a personal assistant bot
 that would interact with users in real-time and read out the recipes to them. This would assist
 the user to follow any recipe, without the need of him actually reading it.
-Current Solutions:.
+
+Current Solutions:
+
 Food.com is a pre-existing food-recommendation service. It organizes recipes into categories
 such as popular, breakfast & brunch, and so on. Such pre-existing food/recipe recommender
 systems, meanwhile, make suggestions based on the tastes of consumers as well as their dietary
