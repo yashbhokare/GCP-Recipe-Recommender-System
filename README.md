@@ -43,6 +43,7 @@ preferences. Further, they do not provide the current price of each ingredient.
 Major Components:
 
 1. Front-end App
+
 On the front-end we use an angular app to build the functionality. The design is
 inspired from food.com. The journey is divided into 4 steps:
 
