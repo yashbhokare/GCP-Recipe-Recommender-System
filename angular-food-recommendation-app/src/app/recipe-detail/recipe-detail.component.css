@@ -1,0 +1,23 @@
+.cart-items{
+    width: 500px;
+    height: auto;
+    text-transform: capitalize;
+}
+.card-class{
+    height: auto;
+    width: 400px;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+.recipe-description{
+    padding-left: 20px;
+}
+
+.recipe-description:first-letter{
+    text-transform: capitalize
+  }
+
+.capitalize {
+    text-transform: capitalize;
+}

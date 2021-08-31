@@ -1,0 +1,23 @@
+<!-- <mat-form-field class="search-value">
+    <mat-label>Search Recipe</mat-label>
+    <input matInput type="text" [(ngModel)]="value" />
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="searchRecipie()">
+        <mat-icon>search</mat-icon>
+    </button>
+</mat-form-field> -->
+
+<form class="example-form">
+    <mat-form-field class="search-value">
+        <mat-label>Search Recipe</mat-label>
+        <input class="search-option" type="text" placeholder="Pick one" aria-label="Search Recipe" matInput [formControl]="myControl"
+            [matAutocomplete]="auto" />
+        <button mat-button *ngIf="myControl" matSuffix mat-icon-button aria-label="Clear" (click)="searchRecipie()">
+            <mat-icon>search</mat-icon>
+        </button>
+        <mat-autocomplete  #auto="matAutocomplete">
+            <mat-option class="search-option" *ngFor="let option of filteredOptions | async" [value]="option">
+                {{ option }}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>

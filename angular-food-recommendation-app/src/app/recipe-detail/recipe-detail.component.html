@@ -1,0 +1,62 @@
+<mat-card class="card-class">
+    <mat-card-header>
+        <mat-card-title>{{ recipeData.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="assets/images/{{ image }}" />
+</mat-card>
+
+<div *ngIf="recipeData.description">
+    <mat-toolbar>
+        <h3>Description</h3>
+    </mat-toolbar>
+    <div class="recipe-description">
+        <p>
+            {{ recipeData.description }}
+        </p>
+    </div>
+</div>
+
+<div *ngIf="ingredientsList">
+    <mat-toolbar>
+        <h3>Ingredients</h3>
+    </mat-toolbar>
+    <div class="cart-items">
+        <mat-selection-list #ingredients (selectionChange)="submitIngredients(ingredients.selectedOptions.selected)">
+            <mat-list-option *ngFor="let value of finalList" [value]="value.ingredients">
+                {{ value.ingredients }} |  {{ value.price }}
+            </mat-list-option>
+        </mat-selection-list>
+        <!-- <p>Options selected: {{ ingredients.selectedOptions.selected.length }}</p> -->
+    </div>
+   
+</div>
+
+<mat-toolbar>
+    <h3>Recipe</h3>
+</mat-toolbar>
+<div *ngFor="let step of steps;let i = index" class="capitalize">
+    <p>{{i+1}}) {{step}}</p>
+</div>
+<div class="example-button-container">
+    <button mat-fab color="primary" (click)="startAssistant()">
+      <mat-icon>volume_up</mat-icon>
+    </button>
+  </div>
+
+<mat-toolbar>
+    <h3>Meal Planner</h3>
+</mat-toolbar>
+<mat-form-field appearance="fill" class="example-form-field">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="datepicker" (dateChange)="addEvent('change', $event)">
+    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker>
+      <mat-datepicker-actions>
+        <button mat-button matDatepickerCancel>Cancel</button>
+        <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+      </mat-datepicker-actions>
+    </mat-datepicker>
+  </mat-form-field>
+<div>
+    <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+</div>

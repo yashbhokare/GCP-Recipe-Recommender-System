@@ -1,0 +1,9 @@
+.search-value{
+    width: 50vw;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+.search-option{
+    text-transform: capitalize;
+}

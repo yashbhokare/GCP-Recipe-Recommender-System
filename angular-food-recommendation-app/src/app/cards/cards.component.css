@@ -1,0 +1,6 @@
+.card-class{
+    height: auto;
+    width: 300px;
+    padding: 20px;
+    text-transform: capitalize;
+}
